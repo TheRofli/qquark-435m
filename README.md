@@ -117,6 +117,9 @@ qquark-435m-v0.1-byte-Q4_K_M.gguf
 
 https://github.com/TheRofli/qquark-435m/releases/download/v0.1/qquark-435m-v0.1-byte-Q4_K_M.gguf
 
+or
+
+https://huggingface.co/TheRofli/qquark-435m
 
 
 ---
