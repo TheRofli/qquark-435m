@@ -1,38 +1,33 @@
-# Python
 __pycache__/
 *.pyc
-.venv/
 venv/
-.env
+.venv/
 
-# Training / checkpoints
+# model files
+*.gguf
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+
+# training/data
+data/
 checkpoints/
 checkpoints_*/
 wandb/
 runs/
 logs/
-*.pt
-*.pth
-*.ckpt
-*.safetensors
-
-# Models / release binaries
-*.gguf
-*.bin
-*.onnx
-*.tar.gz
-*.zip
-
-# Data
-data/
-datasets/
 *.jsonl
 
-# OS / editors
-.DS_Store
+# archives/debug
+*.tar.gz
+*.zip
+debug_*/
+tmp/
+
+# editors
 .vscode/
 .idea/
-
-# Temporary
-tmp/
-debug_*/
+.DS_Store
