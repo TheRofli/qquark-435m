@@ -31,3 +31,4 @@ tmp/
 .vscode/
 .idea/
 .DS_Store
+*:Zone.Identifier
