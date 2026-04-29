@@ -34,13 +34,13 @@ The goal is to improve the prompt before the coding model receives it.
 Input:
 
 ```text
-сделай кнопку красивее
+create a simple browser game
 ```
 
 Output:
 
 ```text
-Переработай задачу как prompt для AI code agent: улучшить внешний вид существующей кнопки, сохранив текущую логику клика и поведение компонента. Сфокусироваться на отступах, размере, цвете, hover/focus состояниях, контрасте и соответствии текущему стилю интерфейса. Не менять backend/API.
+Create a simple browser game using HTML, CSS, and JavaScript in a single file. The game should feature a single-screen interface, clear input controls, and a restart button. Ensure the code is clean, commented, and ready to run immediately without external dependencies.
 ```
 
 ---
@@ -80,7 +80,7 @@ stop: <|im_end|>
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/qquark-435m.git
+git clone https://github.com/TheRofli/qquark-435m.git
 cd qquark-435m
 ```
 
@@ -115,17 +115,10 @@ Download:
 qquark-435m-v0.1-byte-Q4_K_M.gguf
 ```
 
-Place it here:
-
 ```text
-release/qquark-435m-v0.1-byte-Q4_K_M.gguf
+https://github.com/TheRofli/qquark-435m/releases/download/v0.1/qquark-435m-v0.1-byte-Q4_K_M.gguf
 ```
 
-Recommended distribution:
-- GitHub Releases
-- Hugging Face model repository
-
-The `.gguf` file should not be committed directly to git.
 
 ---
 
@@ -156,19 +149,19 @@ llama-server \
 In another terminal:
 
 ```bash
-python -m qquark.cli "сделай кнопку красивее"
+python -m qquark.cli "create a simple browser game"
 ```
 
 With automatic project context:
 
 ```bash
-python -m qquark.cli --context /path/to/project "кнопку круглой сделай"
+python -m qquark.cli --context /path/to/project "make the button round"
 ```
 
 Without context:
 
 ```bash
-python -m qquark.cli --no-context "почему training killed"
+python -m qquark.cli --no-context "why is training killed"
 ```
 
 Custom llama.cpp server:
@@ -176,7 +169,7 @@ Custom llama.cpp server:
 ```bash
 python -m qquark.cli \
   --server http://127.0.0.1:8088 \
-  "сделай задачу для агента чтобы он улучшил UI"
+  "make a task for the agent to improve the UI"
 ```
 
 ---
@@ -290,6 +283,8 @@ Known limitations:
 
 ## License
 
-Choose a license before release. Recommended for code: MIT.
+The code in this repository is released under the MIT License.
 
-For model weights, choose a separate model license if needed.
+The qquark 435M model weights are released under the Apache-2.0 License.
+
+See `LICENSE` for code licensing details.
